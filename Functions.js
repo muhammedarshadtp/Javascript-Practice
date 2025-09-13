@@ -1,4 +1,5 @@
 // // Normal function
+
 // function sum(a, b) {
 //     return a + b
 // }
@@ -23,16 +24,20 @@
 // let arrow = (a, b) => a * b
 // console.log(arrow(2, 3))
 
+
 // // callback function
+
 // function sum(a, b) {
 //     return a * b
 // }
 // sum(2, 3)
-// function sum2(a, b, operater) {
-//     let m = operater(a, b)
+// function sum2(a, b, cb) {
+//     let m = cb(a, b)
 //     console.log(m)
 // }
 // sum2(10, 5, sum)
+
+
 
 // // pure and impure function
 
@@ -80,12 +85,13 @@
 // a()
 
 
-const counterIIFE = (function () {
-  let count = 0; // private
-  return function () {
-    return ++count;
-  };
-})();
-console.log(counterIIFE()); // 1
-console.log(counterIIFE()); // 2
-console.log(counterIIFE()); // 3
+// const counterIIFE = (function () {
+//   let count = 0; // private
+//   return function () {
+//     return ++count;
+//   };
+// })();
+// console.log(counterIIFE()); // 1
+// console.log(counterIIFE()); // 2
+// console.log(counterIIFE()); // 3
+
