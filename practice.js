@@ -223,3 +223,141 @@
 // setTimeout(() => console.log("timeout"), 0);
 // Promise.resolve().then(() => console.log("promise"));
 // console.log("end");
+
+
+// Reverse a string
+// let a='arshad'
+// let b=''
+
+// for(let i=a.length-1;i>=0;i--){
+//     b+=a[i]
+// }
+// console.log(b)
+
+// Palindrome check
+// let a='malayalam'
+// let left=0
+// let right=a.length-1
+// let palindrome=true
+// while(left < right){
+//     if (a[left]!=a[right]){
+//         palindrome=false
+//         break;
+//     }
+//     left++
+//         right--
+// }
+// console.log(palindrome)
+
+// Find the second largest number in an array
+// let a=[1,4,8,3,6]
+// let b=a.sort()
+// console.log(b[b.length-2])
+
+
+// Remove duplicates from an array
+
+// let a=[1,2,3,2,5,6,1]
+
+// for(let i=0;i<a.length;i++){
+
+//     for(let j=i+1;j<a.length;j++){
+//         if(a[i]==a[j]){
+//             a.splice(j,1)
+//         }
+//     } 
+// }
+// console.log(a)
+
+// Flatten nested arrays
+
+// let a=[1,2,[3,4,[5,6,[7,8]]]]
+// let b= a.flat(Infinity)
+// console.log(b)
+
+// Factorial (recursion)
+
+// function fact(a){
+//     if(a<=1) return 1
+//     return a* fact(a-1)
+// }
+// console.log(fact(5))
+
+
+// 7. Count character occurrences in a string
+
+// function occu(a){
+//     let obj={}
+//     for(let word of a){
+//         obj[word]=(obj[word]|| 0)+1
+//     }
+//     return obj
+// }
+// let arr='slincnes'
+// console.log(occu(arr))
+
+// 8. Check if two strings are anagrams
+// let a = 'silent'
+// let b = 'listen'
+
+// function anagram(a, b) {
+//     if(a.length != b.length) return false
+//     let obj1 = {}
+   
+//     for (let word of a) {
+//         obj1[word] = (obj1[word] || 0) + 1
+//     }
+//     for (let word of b) {
+//         if(!obj1[word]) return false
+//           obj1[word]--
+//     }
+  
+//     // let key1 = Object.keys(obj1)
+//     // let key2 = Object.keys(obj2)
+//     // if (key1.length != key2.length) return false
+
+//     // for (let words of key1) {
+//     //      if(obj1[words] !== obj2[words]){
+//     //         return false
+//     //      }
+//     // }
+//     return true
+// }
+// console.log(anagram(a, b))
+// 9. Find the missing number in an array
+// function missing(a,b){
+//     a.sort((a,b)=> a-b)
+//     let result = []
+//     for(let i=1;i<=b;i++){
+//         if(!a.includes(i)){
+//             result.push(i)
+//         }
+//     }
+//     return result
+// }
+// let arr=[1,3,5,7,9]
+
+// console.log(missing(arr,9))
+// 10. Sort array without sort()
+// 16. Check if a number is prime
+// 17. Fibonacci series
+
+
+// 
+// Find longest word in a sentence
+// function longestWord(sentence) {
+//     let words = sentence.split(" ");
+//     let longest = "";
+//     for (let word of words) {
+//         if (word.length > longest.length) longest = word;
+//     }
+//     return longest;
+// }
+
+// console.log(longestWord("I love JavaScript programming")); // "programming"
+
+// let str = "hello world from js";
+
+// let b= str.split(" ")
+// .map(word=>word[0].toUpperCase() + word.slice(1)).join(' ')
+// console.log(b)
