@@ -361,3 +361,25 @@
 // let b= str.split(" ")
 // .map(word=>word[0].toUpperCase() + word.slice(1)).join(' ')
 // console.log(b)
+
+
+// const promise = new Promise((res,rej)=>{
+//     if(1>2){
+//         res("hii")
+//     }else{
+//         rej('hello')
+//     }
+// })
+// .then((res)=>{console.log(res)})
+// .catch((rej)=>{console.log(rej)})
+
+// const http = require("http")
+
+//  http.createServer((req,res)=>{
+//     res.end("Hello World")
+
+// })
+
+// .listen(3001,()=>{console.log("server is running")})
+
+
