@@ -112,3 +112,16 @@ console.log(sort)
 
 
 
+let arsh =[3,6,9,1,2,6,7,0]
+
+for(let i=0;i<arsh.length;i++){
+    for (let j=0;j<arsh.length;j++){
+        if(arsh[i]<arsh[j]){
+            let temp = arsh[i]
+            arsh[i]=arsh[j]
+            arsh[j]=temp
+        }
+    }
+}
+
+console.log(arsh)
