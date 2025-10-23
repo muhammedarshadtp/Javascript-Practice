@@ -124,4 +124,4 @@ for(let i=0;i<arsh.length;i++){
     }
 }
 
-console.log(arsh)
+console.log(arsh,'kkkk')
