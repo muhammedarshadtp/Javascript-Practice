@@ -234,27 +234,69 @@
 // console.log("bottam");
 
 
-const radius = [1,3,5,6,8]
+// const radius = [1,3,5,6,8]
 
-const area = function(radius){
-    return Math.PI * radius * radius
-}
+// const area = function(radius){
+//     return Math.PI * radius * radius
+// }
 
-const diemeter = function (radius){
-    return 2*radius
-}
+// const diemeter = function (radius){
+//     return 2*radius
+// }
 
-const Circumference = function (radius){
-    return 2 * Math.PI* radius
-}
+// const Circumference = function (radius){
+//     return 2 * Math.PI* radius
+// }
 
-function calculate(radius,logic){
-    let count =[]
-    for(let i=0;i<radius.length;i++){
-        count.push(logic(radius[i]))
-    }
-    return count
-}
-console.log(calculate(radius,area));
-console.log(calculate(radius,diemeter));
-console.log(calculate(radius,Circumference));
+// function calculate(radius,logic){
+//     let count =[]
+//     for(let i=0;i<radius.length;i++){
+//         count.push(logic(radius[i]))
+//     }
+//     return count
+// }
+// console.log(calculate(radius,area));
+// console.log(calculate(radius,diemeter));
+// console.log(calculate(radius,Circumference));
+
+
+                  // MAP
+
+//    Think of map() like a machine that takes each item from an array,
+//  transforms it, and gives you a new array with the transformed values.
+
+
+
+// const arr = [1,2,3,4,5,6,7,8]
+
+// const arr1 = arr.map((a)=> a.toString(2))
+
+// console.log(arr1);  //.  number -> binary
+
+// const bin = ["100","101","110","111","1000"]
+
+// const arr2 = bin.map((b)=> parseInt(b,2))
+
+// console.log(arr2); // Binary -> number
+
+
+// const arr =[1,2,3,4,5,6]
+
+// const arr1 = arr.filter(a=> a%2 === 0 )
+
+// console.log(arr1);
+
+// const users = [
+//   { name: "Arshad", age: 22 },
+//   { name: "Ali", age: 25 },
+//   { name: "Sara", age: 21 },
+//   { name: "John", age: 30 }
+// ];
+
+// const userName= users.filter(a=> a.age >23).map(a => a.name)
+// console.log(userName);
+
+// const userName = users.reduce((acc,curr)=>{
+//     return acc.age > curr.age ? acc:curr
+// },0)
+// console.log(userName);
