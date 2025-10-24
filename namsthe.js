@@ -189,14 +189,72 @@
 // CallBack function
 
 
-setTimeout(function (){
-    console.log("timer");
-},2000)
+// setTimeout(function (){
+//     console.log("timer");
+// },2000)
 
-function x(y){
-    console.log("x");
-    y()
+// function x(y){
+//     console.log("x");
+//     y()
+// }
+// x(function y(){
+//     console.log("y");
+// })
+
+// function a(){
+//     console.log("haiii");
+// }
+// a()
+// console.log("hello");
+
+// console.log("start");
+
+// setTimeout( function (){
+//     console.log("time outer");
+// },2000)
+
+// console.log("end");
+
+// console.log("Start");
+
+// setTimeout( function(){
+//     console.log("callBack");
+// },5000)
+
+// console.log("end");
+
+// let start = new Date().getTime()
+// let end =  start
+
+// while(end < start + 10000){
+//     end = new Date().getTime()
+
+// }
+
+// console.log("bottam");
+
+
+const radius = [1,3,5,6,8]
+
+const area = function(radius){
+    return Math.PI * radius * radius
 }
-x(function y(){
-    console.log("y");
-})
+
+const diemeter = function (radius){
+    return 2*radius
+}
+
+const Circumference = function (radius){
+    return 2 * Math.PI* radius
+}
+
+function calculate(radius,logic){
+    let count =[]
+    for(let i=0;i<radius.length;i++){
+        count.push(logic(radius[i]))
+    }
+    return count
+}
+console.log(calculate(radius,area));
+console.log(calculate(radius,diemeter));
+console.log(calculate(radius,Circumference));
