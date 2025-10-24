@@ -98,16 +98,38 @@
 // b()
 
 
-function a() {
-    var a = 10;
-    function b() {
-        console.log(a, "20");
-        function c() {
-            console.log(a, "200");
-        }
-        c()
+// function a() {
+    
+//     function b() {
+//         console.log(x, "20");
+//         function c() {
+//             console.log(x, "200");
+//         }
+//         c()
+//     }
+//      b()
+// }
+// var x = 10;
+// a()
+
+// constracter
+
+function Counter(){
+    count=0
+    this.incrementCounter= function(){
+        count++
+        console.log(count);
+        
     }
-     b()
+    this.decrementCounter = function(){
+        count--
+        console.log(count);
+        
+    }
 }
 
-a()
+var counter1= new Counter()
+counter1.incrementCounter()
+counter1.incrementCounter()
+counter1.incrementCounter()
+counter1.decrementCounter()
