@@ -4,7 +4,7 @@
 // // function num (n){
 // //     var ans = n*2 
 // //    return ans
-   
+
 // // }
 
 // // var squre1 = num(a)
@@ -44,29 +44,70 @@
 //     console.log(a);
 //     console.log(b);
 //     console.log(c);
-    
+
 // }
 // console.log(a);
 //     console.log(b);
 //     console.log(c);
 
-var x = 10 ;
-{
-    let x = 20;
-    {
-        // console.log(x) // 20 
-        let x = 30;
-        {
-            let x = 20
-            console.log(x,"20")
+// var x = 10 ;
+// {
+//     let x = 20;
+//     {
+//         // console.log(x) // 20 
+//         let x = 30;
+//         {
+//             let x = 20
+//             console.log(x,"20")
+//         }
+//         console.log(x) //30
+//     }
+
+// }
+// console.log(x,"10")
+
+// function a(){
+//     var i=3
+//     setTimeout(function (){
+//         console.log(i);
+
+
+//     },2000)
+//     console.log("Hello Arshad");
+
+// }
+// a()
+
+
+// function b
+//     () {
+
+//     for (var i = 1; i <= 5; i++) {
+//             setTimeout(function () {
+//                 console.log(i);
+//             }, i * 2000)
+
+
+
+//     }
+//     console.log("Hello Arshad");
+
+
+// }
+
+// b()
+
+
+function a() {
+    var a = 10;
+    function b() {
+        console.log(a, "20");
+        function c() {
+            console.log(a, "200");
         }
-        console.log(x) //30
+        c()
     }
-    
+     b()
 }
-console.log(x,"10")
 
-
-
-
-
+a()
