@@ -114,22 +114,89 @@
 
 // constracter
 
-function Counter(){
-    count=0
-    this.incrementCounter= function(){
-        count++
-        console.log(count);
+// function Counter(){
+//     count=0
+//     this.incrementCounter= function(){
+//         count++
+//         console.log(count);
         
-    }
-    this.decrementCounter = function(){
-        count--
-        console.log(count);
+//     }
+//     this.decrementCounter = function(){
+//         count--
+//         console.log(count);
         
-    }
-}
+//     }
+// }
 
-var counter1= new Counter()
-counter1.incrementCounter()
-counter1.incrementCounter()
-counter1.incrementCounter()
-counter1.decrementCounter()
+// var counter1= new Counter()
+// counter1.incrementCounter()
+// counter1.incrementCounter()
+// counter1.incrementCounter()
+// counter1.decrementCounter()
+
+
+
+//    Function statement also know as function declaration
+// a()
+// function a(){
+//     console.log("hello");
+    
+// }
+
+
+//  function Expresstion
+
+// let fun = function(){
+//     console.log("Hiii");
+// }
+// fun()
+
+//  Anonymous function
+
+//  function (){
+
+//   }
+
+// 🔸 An anonymous function is simply a function without a name.
+// 🔸 Commonly used as callbacks or inside function expressions.
+// 🔸 It’s not hoisted (unlike named functions).
+// 🔸 You can write them with the function keyword or with the => (arrow function) syntax.
+
+
+//   Named function expression
+
+// let named = function wer(){
+//     console.log("Named");
+// }
+// named()
+
+
+
+// Different between parameter and argument 
+
+// function para(a){ // this is parameter
+//     console.log(a);
+// }
+// para(10) // this is an argument
+
+
+//  First class function. 
+
+// First-class function means JavaScript treats functions as normal values —
+// you can assign, pass, return, and store them like any other data.
+
+
+// CallBack function
+
+
+setTimeout(function (){
+    console.log("timer");
+},2000)
+
+function x(y){
+    console.log("x");
+    y()
+}
+x(function y(){
+    console.log("y");
+})
