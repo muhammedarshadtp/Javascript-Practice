@@ -300,3 +300,26 @@
 //     return acc.age > curr.age ? acc:curr
 // },0)
 // console.log(userName);
+
+
+//            Promise
+
+//. promise is an object its representing  the eventual completion  of failure of an asynchronus opreation.
+
+// var age = 20;
+
+const promise = new Promise((res,rej)=>{
+    console.log("1");
+    setTimeout(()=>{
+        res('success')
+    },3000)
+    console.log("2");
+})
+// setTimeout(()=>{
+//     console.log(this.age,'age');
+// })
+// setTimeout(function (){
+//     console.log(this.age,'inside func');
+// })
+promise.then(data=>console.log(data))
+promise.catch(error =>console.log(error))
