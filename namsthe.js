@@ -99,7 +99,7 @@
 
 
 // function a() {
-    
+
 //     function b() {
 //         console.log(x, "20");
 //         function c() {
@@ -119,12 +119,12 @@
 //     this.incrementCounter= function(){
 //         count++
 //         console.log(count);
-        
+
 //     }
 //     this.decrementCounter = function(){
 //         count--
 //         console.log(count);
-        
+
 //     }
 // }
 
@@ -140,7 +140,7 @@
 // a()
 // function a(){
 //     console.log("hello");
-    
+
 // }
 
 
@@ -260,7 +260,7 @@
 // console.log(calculate(radius,Circumference));
 
 
-                  // MAP
+// MAP
 
 //    Think of map() like a machine that takes each item from an array,
 //  transforms it, and gives you a new array with the transformed values.
@@ -308,18 +308,142 @@
 
 // var age = 20;
 
-const promise = new Promise((res,rej)=>{
-    console.log("1");
-    setTimeout(()=>{
-        res('success')
-    },3000)
-    console.log("2");
-})
+// const promise = new Promise((res,rej)=>{
+//     console.log("1");
+//     setTimeout(()=>{
+//         res('success')
+//     },3000)
+//     console.log("2");
+// })
 // setTimeout(()=>{
 //     console.log(this.age,'age');
 // })
 // setTimeout(function (){
 //     console.log(this.age,'inside func');
 // })
-promise.then(data=>console.log(data))
-promise.catch(error =>console.log(error))
+// promise.then(data=>console.log(data))
+// promise.catch(error =>console.log(error))
+
+// const cart =["shoes","laptop","phone"]
+
+// const promise = createCart(cart)
+
+// promise.then((result) => {
+//     console.log(result);
+// })
+// .catch((err) => {
+//     console.log(err);
+// });
+
+// function createCart(cart){
+
+//  const pr = new Promise((resole,reject)=>{
+
+//     if(!validateCart(cart)){
+//         const err = new Error("cart is not valid")
+//         reject(err)
+//     }
+//     const orderId='12345'
+//     if(orderId){
+//         setTimeout(()=>{
+//             resole(orderId)
+//         },2000)
+//     }
+
+// })
+// return pr
+// }
+
+// function validateCart(){
+//     return true
+// }
+
+
+
+
+
+
+
+
+
+//                *Promise.All (Waits for all promises to succeed)
+
+// const p1 = new Promise((res,rej)=>{
+//     setTimeout(()=>{res("p1 success")},2000)
+// })
+
+// const p2 = new Promise((res,rej)=>{
+//     setTimeout(()=>{res("p2 success")},3000)
+// })
+
+// const p3 = new Promise((res,rej)=>{
+//     setTimeout(()=>{res("p3 success")},3000)
+// })
+
+
+
+// Promise.all([p1,p2,p3])
+// .then(data=>console.log(data))
+// .catch(err => console.error(err))
+
+//                outputs => [ 'p1 success', 'p2 success', 'p3 success' ]
+
+
+//               *Promise.settled(Waits for all promises to finish — regardless of success or failure.)
+
+// const p1 = new Promise((res,rej)=>{
+//     setTimeout(()=>rej("p1 seccuss"),2000)
+// })
+// const p2 = new Promise((res,rej)=>{
+//     setTimeout(()=>res("p2 seccuss"),3000)
+// })
+// const p3 = new Promise((res,rej)=>{
+//     setTimeout(()=>res("p3 seccuss"),1000)
+// })
+
+// Promise.allSettled([p1,p2,p3])
+// .then(data=>console.log(data))
+// .catch(err => console.error(err))
+
+//      outputs=> [
+//   { status: 'rejected', reason: 'p1 seccuss' },
+//   { status: 'fulfilled', value: 'p2 seccuss' },
+//   { status: 'fulfilled', value: 'p3 seccuss' }
+// ]
+
+//                 *Promise.race(Returns the first promise that settles (either resolves or rejects))
+
+// const p1 = new Promise((res,rej)=>{
+//     setTimeout(res,2000,"p1 seccuss")
+// })
+// const p2 = new Promise((res,rej)=>{
+//     setTimeout(res,3000,"p2 seccuss")
+// })
+// const p3 = new Promise((res,rej)=>{
+//     setTimeout(rej,1000,"p3 reject")
+// })
+
+// Promise.race([p1,p2,p3])
+// .then(data => console.log(data)) //. p3 seccuss
+// .catch(err=> console.error(err)) //. p3 reject
+
+
+
+//              *Promice.any (Returns the first promise that resolves (ignores rejections).)
+
+
+// const p1 = new Promise((re,rej)=>{
+//     setTimeout(res,300,"p1 success")
+// })
+// const p2 = new Promise((res,rej)=>{
+//     setTimeout(rej,200," p2 reject")
+// })
+// const p3 = new Promise((res,rej)=>{
+//     setTimeout(res,100,"p3 success")
+// })
+
+// Promise.any([p1,p2,p3])
+// .then(data => console.log(data))
+// .catch(err=>console.log(err))
+
+//      OutPut => p3 success
