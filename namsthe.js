@@ -447,3 +447,20 @@
 // .catch(err=>console.log(err))
 
 //      OutPut => p3 success
+
+
+
+
+//          Async and await 
+
+
+//. await can only use be used an async function.
+const p = new Promise((resolve, reject) => {
+    resolve("p resolved")
+})
+
+async function name() {
+    let val = await p
+    console.log(val);
+}
+name()
