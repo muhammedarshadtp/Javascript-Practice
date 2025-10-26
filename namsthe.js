@@ -359,6 +359,15 @@
 // }
 
 
+// const p1 = new Promise((resolve, reject) => {
+//     setTimeout(resolve,10000,"after 10 second it will print")
+// })
+
+// p1.then(data => console.log(data))
+// console.log("Hello Arshad");  Hello Arshad,// after 10 second it will print
+
+
+
 
 
 
@@ -455,12 +464,24 @@
 
 
 //. await can only use be used an async function.
+// ---------JS engine was  wating for promise to resolved---
+
+
+
 const p = new Promise((resolve, reject) => {
-    resolve("p resolved")
+  setTimeout(resolve,1000,"i will print after 2 second")
+})
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(resolve,10000,"i will print after 2 second")
 })
 
 async function name() {
     let val = await p
     console.log(val);
+    console.log("Hello");
+    let val1 = await p1
+    console.log(val1);
+    console.log("Hello");
 }
 name()
+//     output=>i will print after 2 second,Hello
