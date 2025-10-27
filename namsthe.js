@@ -468,20 +468,39 @@
 
 
 
-const p = new Promise((resolve, reject) => {
-  setTimeout(resolve,1000,"i will print after 2 second")
-})
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(resolve,10000,"i will print after 2 second")
-})
+// const p = new Promise((resolve, reject) => {
+//   setTimeout(resolve,1000,"i will print after 2 second")
+// })
+// const p1 = new Promise((resolve, reject) => {
+//   setTimeout(resolve,10000,"i will print after 2 second")
+// })
 
-async function name() {
-    let val = await p
-    console.log(val);
-    console.log("Hello");
-    let val1 = await p1
-    console.log(val1);
-    console.log("Hello");
-}
-name()
+// async function name() {
+//     let val = await p
+//     console.log(val);
+//     console.log("Hello");
+//     let val1 = await p1
+//     console.log(val1);
+//     console.log("Hello");
+// }
+// name()
 //     output=>i will print after 2 second,Hello
+
+
+function hii(){
+   return new Promise((res,rej)=>{
+     setTimeout(()=>{
+        const APIS = "https://jsonplaceholder.typicode.com/posts"
+        res(APIS)
+    },2000)
+   })
+    
+}
+
+async function hello(cd){
+    const a=await hii()
+    const data = await fetch(a)
+    const result = await data.json()
+    console.log(result[3]);
+}
+hello()
